@@ -8,7 +8,8 @@ class MP3Importer
   
   def files
     Dir.new(path).each do |file|
-      if file.length > 4
+      if file.length > 4  #does this have to do with the
+                          #"only mp3s" requirement?
         @files << file
       end
     end
