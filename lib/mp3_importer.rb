@@ -3,16 +3,17 @@ class MP3Importer
   
   def initialize(path)
     @path = path
+    @files = [ ]
   end
   
   def files
-    files = [ ]
+   
     Dir.new(path).each do |file|
       if file.length > 4
-        files << file
+        @files << file
       end
     end
-    files
+    @files
   end
   
   def import
