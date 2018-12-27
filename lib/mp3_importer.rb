@@ -7,7 +7,6 @@ class MP3Importer
   end
   
   def files
-   
     Dir.new(path).each do |file|
       if file.length > 4
         @files << file
